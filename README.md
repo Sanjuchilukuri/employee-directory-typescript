@@ -27,7 +27,7 @@
 ## About The Project
 </br>
 
-![demo-page](https://github.com/Technovert-Product-Engineering/4-employee-directory-typescript-sanju-/assets/81815695/f5b0106c-e24d-4e36-bfaf-708f38782578)
+![demo-page](https://raw.githubusercontent.com/Sanjuchilukuri/employee-directory-typescript/main/src/assets/demo-page.png)
 </br>
 </br>
 The employee directory project offers functionalities for manipulating employee data, including the ability to add and remove employees, sort them based on various criteria, and modify their roles.
