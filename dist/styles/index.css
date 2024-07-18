@@ -1,0 +1,345 @@
+@import url(../../dist/styles/common.css);
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+.active-employees .all-employees-item {
+  background-color: #fde9e9;
+}
+.active-employees .all-employees-item > div p {
+  color: #f44848 !important;
+}
+.active-employees .all-employees-item img {
+  filter: invert(53%) sepia(87%) saturate(2987%) hue-rotate(329deg) brightness(94%) contrast(103%);
+}
+.active-employees .all-employees-item::after {
+  color: #f44848 !important;
+}
+.active-employees::after {
+  content: " ";
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  height: 3.06rem;
+  width: 4px;
+  border-radius: 5px 0 0 5px;
+  background-color: #f44848;
+}
+
+.active-employee-toggle {
+  text-align: center;
+  color: white;
+  border-radius: 7px;
+  position: absolute;
+  right: 0px;
+  top: 4rem;
+  padding: 1rem;
+  animation: slideRightToLeft 0.5s forwards;
+}
+
+.main-content .options {
+  margin-top: 1.5rem;
+}
+.main-content .options ul {
+  /* width: 100%;
+  overflow-x: scroll; */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.main-content .options ul li img {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.main-content .options .img-filter-active {
+  filter: invert(36%) sepia(98%) saturate(1876%) hue-rotate(340deg) brightness(98%) contrast(95%);
+}
+.main-content .options li:not(:first-child) {
+  margin-top: 10px;
+  padding: 0.74rem;
+  margin-left: 0.53rem;
+  color: #91979b;
+  border-radius: 0.5rem;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  background-color: #eaebee;
+}
+.main-content .options .alphabet-active {
+  background-color: #f44848 !important;
+  color: white !important;
+}
+.main-content .user-data {
+  margin-top: 0.85rem;
+  box-shadow: 0px 2px 2px 3px rgba(174, 174, 174, 0.299);
+  border-radius: 0.5rem;
+}
+.main-content .user-data .delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  align-items: center;
+  border-bottom: 1px solid #6a6f74;
+}
+.main-content .user-data .delete div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.main-content .user-data .delete div > button {
+  cursor: not-allowed;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #f89191;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+.main-content .user-data .delete img:last-child {
+  height: 1.5625rem;
+}
+.main-content .user-data table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+}
+.main-content .user-data table input {
+  cursor: pointer;
+}
+.main-content .user-data table tr {
+  position: relative;
+  border-bottom: 1px solid #6a6f74;
+}
+.main-content .user-data table tr td:first-child {
+  padding: 0.7rem;
+}
+.main-content .user-data table tr td {
+  font-size: 0.8rem;
+  padding: 0rem;
+}
+.main-content .user-data table tr td:has(button) {
+  text-align: center;
+}
+.main-content .user-data table tr .ellipsis {
+  padding: 0.7rem;
+  font-weight: 900;
+  text-align: center;
+  cursor: pointer;
+  text-align: center;
+}
+.main-content .user-data table tr .transparent-btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.main-content .user-data table tr:hover {
+  background-color: #fff4f4;
+}
+.main-content .user-data table tr .show + div {
+  display: flex;
+}
+.main-content .user-data table th .heading-wrapper {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+.main-content .user-data table th button {
+  cursor: pointer;
+  margin: 0;
+  padding: 1rem 0.5rem 1rem 0rem;
+  text-align: start;
+  font-size: 0.8rem;
+}
+.main-content .user-data table th .icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.main-content .user-data table th .icon i {
+  font-size: 0.5rem;
+}
+.main-content .user-data table th:last-child {
+  font-weight: 900;
+}
+.main-content .user-data table .user {
+  display: flex;
+  gap: 0.5rem;
+}
+.main-content .user-data table .user img {
+  height: 1.875rem;
+  width: 1.875rem;
+  border-radius: 50%;
+}
+.main-content .user-data table .user .user-details p {
+  margin: 0;
+}
+.main-content .user-data table .apperance p {
+  text-align: center;
+  background-color: #e7f4e8;
+  padding: 7px 0px;
+  border-radius: 0.625rem;
+  color: #39bb8b;
+  width: 3.75rem;
+}
+.main-content .user-data .last-element {
+  display: none;
+  background-color: white;
+  position: absolute;
+  top: 0.9rem;
+  right: 3.5rem;
+  align-items: center;
+}
+.main-content .user-data .last-element > button {
+  font-weight: 500;
+  margin: 0;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid black !important;
+  text-align: center;
+  cursor: pointer;
+}
+.main-content .user-data .last-element > button:nth-child(2) {
+  border-style: solid none !important;
+}
+
+.employee-model {
+  display: none;
+  width: 100%;
+}
+
+.employee-model section {
+  /* width: 100%; */
+  display: flex;
+  gap: 2rem;
+}
+.employee-model section #file {
+  display: none;
+}
+.employee-model section .image-section label {
+  cursor: pointer;
+}
+.employee-model section .image-section img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+.employee-model section .image-section p {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+}
+.employee-model section form div p {
+  margin-top: 0;
+  font-weight: bold;
+}
+.employee-model section form label[for=empno] {
+  display: block;
+}
+.employee-model section form .wrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.employee-model section form .wrapper div {
+  display: flex;
+  flex-direction: column;
+}
+.employee-model section form label {
+  color: #494a4b;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.employee-model section form input {
+  outline: none;
+  padding: 0.5rem;
+  border: 1px solid rgba(54, 53, 53, 0.185);
+  border-radius: 5px;
+  width: 14rem;
+}
+.employee-model section form .input-error {
+  border: 1px solid red;
+}
+.employee-model section form .error {
+  display: none;
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 1rem;
+  background-image: url(../../src/assets/warning-diamond.svg);
+  background-repeat: no-repeat;
+}
+.employee-model section form .show + span {
+  display: inline !important;
+}
+.employee-model section form input:focus,
+.employee-model section form select:focus {
+  border: 2px solid #4c9aff;
+}
+.employee-model section form .emp-inf-heading {
+  margin-top: 1rem;
+}
+.employee-model section form #joining {
+  width: 23rem;
+}
+.employee-model section form select {
+  border: 1px solid rgba(54, 53, 53, 0.185);
+  border-radius: 5px;
+  outline: none;
+  padding: 0.5rem;
+  color: #6a6f74;
+  width: 24rem;
+  /* width: 25.5vw; */
+  background-color: #f4f5f7;
+}
+.employee-model section form > div:nth-child(3) {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+.employee-model section form > div:nth-child(3) button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
+}
+.employee-model section form > div:nth-child(3) button:first-child {
+  background-color: rgb(253, 233, 233);
+  color: #ff4a4a;
+}
+.employee-model section form > div:nth-child(3) button:nth-child(2) {
+  background-color: #fd3535;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media screen and (max-width: 1185px) {
+  .add-employee {
+    flex-direction: column;
+    align-items: center !important;
+    gap: 0.6rem;
+  }
+  .add-employee p,
+  .add-employee h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 802px) {
+  .employee-model section form input,
+  .employee-model section form select {
+    min-width: 10rem;
+    max-width: 14rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #alphabetsWrapper {
+    display: none;
+  }
+}

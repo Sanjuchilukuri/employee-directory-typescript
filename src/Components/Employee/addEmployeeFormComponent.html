@@ -1,0 +1,136 @@
+<div class="employee-model" id="employeeModel">
+    <h2>Add Employee</h2>
+    <section>
+      <input type="file" id="file" onchange="empObj.updatFormImage(event)" />
+      <div class="image-section">
+        <label for="file" >
+          <img id="img" src="./assets/profiles/blank-profile-picture.webp" alt="Profile picture" accept="image/*"/>
+          <p>Edit</p>
+        </label>
+      </div>
+
+      <form id="form" onsubmit="return empObj.onSubmitEmployee(event)">
+        <div>
+          <p>Personal Information</p>
+          <div>
+            <label for="empno"> Emp No </label>
+            <input
+              type="text"
+              id="empno"
+              name="empno"
+              placeholder="Text"
+              pattern="[A-Z]{2}[0-9]*"
+            />
+            <span id="empnoError" class="error">This filed is required</span>
+          </div>
+
+          <div class="wrapper">
+            <div>
+              <label for="firstname"> Firstname </label>
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                placeholder="firstName"
+                pattern="[A-Za-z]{3}[A-Za-z]*"
+              />
+              <span class="error">This filed is required</span>
+            </div>
+            <div>
+              <label for="lastname"> Lastname </label>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                placeholder="LastName"
+                pattern="[A-Za-z]{3}[A-Za-z]*"
+              />
+              <span class="error">This filed is required</span>
+            </div>
+            <div>
+              <label for="dob"> Date of Birth </label>
+              <input
+                placeholder="Select"
+                type="text"
+                onfocus="(this.type='date')"
+                onblur="(this.type='text')"
+                id="dob"
+                name="dob"
+              />
+            </div>
+          </div>
+          <div class="wrapper">
+            <div>
+              <label for="mail"> Email Id </label>
+              <input
+                type="email"
+                id="mail"
+                placeholder="joe.j@technovert.com"
+                pattern="[a-z 0-9]+[.]{0,1}[a-z 0-9]+@[a-z]*.com"
+                name="mail"
+              />
+              <span class="error">This filed is required</span>
+            </div>
+            <div>
+              <label for="phno"> Mobile Number </label>
+              <input
+                type="tel"
+                id="phno"
+                name="phno"
+                placeholder="0000000000"
+                pattern="[1-9][0-9]{9}"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="emp-inf-heading">Employee Information</p>
+          <div class="wrapper">
+            <div>
+              <label for="joining"> Joining Date </label>
+              <input
+                value="2024-02-20"
+                placeholder="20-02-2024"
+                type="text"
+                name="joining"
+                onfocus="(this.type='date')"
+                onblur="(this.type='text')"
+                id="joining"
+              />
+              <span  class="error">This filed is required</span>
+            </div>
+            <div>
+              <label for="location"> Location </label>
+              <select onchange="utilsObj.toggleSelectTagState(this)" id="location" name="location"></select>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div>
+              <label for="jobTitle"> Job Title </label>
+              <select onchange="utilsObj.toggleSelectTagState(this)" id="jobTitle" name="jobTitle"></select>
+            </div>
+            <div>
+              <label for="department"> Department </label>
+              <select onchange="utilsObj.toggleSelectTagState(this)" id="department" name="department"></select>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div>
+              <label for="manager"> Assign Manager </label>
+              <select onchange="utilsObj.toggleSelectTagState(this)" id="manager" name="manager"></select>
+            </div>
+            <div>
+              <label for="project"> Assign Project </label>
+              <select onchange="utilsObj.toggleSelectTagState(this)" id="project" name="project"></select>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <button type="reset" onclick="empObj.redirectWindow()">Cancel</button>
+          <button id="formSubmitBtn" type="submit">Add Employee</button>
+        </div>
+      </form>
+    </section>
+  </div>

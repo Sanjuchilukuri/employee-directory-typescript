@@ -1,0 +1,32 @@
+[
+  {
+    "Role": "Customer Service Manager",
+    "Department": "Sales",
+    "Location": "Hyderabad"
+  },
+  {
+    "Role": "UX Designer",
+    "Department": "UIUX",
+    "Location": "Seatle"
+  },
+  {
+    "Role": "Assistant Backend Developer",
+    "Department": "Product Engg",
+    "Location": "Hyderabad"
+  },
+  {
+    "Role": "Human Resource Manager",
+    "Department": "HR",
+    "Location": "Seatle"
+  },
+  {
+    "Role": "Front End Developer",
+    "Department": "Product Engg",
+    "Location": "Hyderabad"
+  },
+  {
+    "Role": "Senior Developer",
+    "Department": "SDE",
+    "Location": "Seatle"
+  }
+]

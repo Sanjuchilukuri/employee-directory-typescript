@@ -1,0 +1,46 @@
+<section class="add-role-section" id="addRoleSection">
+    <h3>Create New Role</h3>
+    <form onsubmit="return rolesObj.addRole()">
+      <div>
+        <div class="label-input-wrapper">
+          <label for="role-name">Role Name</label>
+          <input type="text" id="roleName" />
+        </div>
+        <div class="label-input-wrapper">
+          <label for="department">Department</label>
+          <select
+            id="department"
+            name="department"
+            onchange="rolesObj.filterEmployeesOnDept(event)"
+          ></select>
+        </div>
+      </div>
+
+      <div class="label-input-wrapper">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="10">Text</textarea>
+      </div>
+
+      <div class="label-input-wrapper">
+        <label for="Location">Location</label>
+        <select id="Location" name="location"></select>
+      </div>
+
+      <div class="label-input-wrapper">
+        <label for="assign-employees">Assign Employees</label>
+        <input
+          type="text"
+          id="assignEmployees"
+          placeholder="Search for an Employee"
+          onkeyup="rolesObj.searchEmployee(this)"
+        />
+      </div>
+
+      <section id="AddRoleFormWrapper"></section>
+
+      <div class="buttons-section">
+        <button >Cancel</button>
+        <button type="submit">Add Role</button>
+      </div>
+    </form>
+  </section>

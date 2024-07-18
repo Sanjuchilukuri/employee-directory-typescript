@@ -1,0 +1,259 @@
+@import url(../../dist/styles/common.css);
+.active {
+  position: relative;
+}
+.active .active-roles {
+  margin-top: 1rem;
+  background-color: #fde9e9;
+  border-radius: 8px;
+}
+.active .active-roles > p {
+  color: #f44848 !important;
+}
+.active .active-roles > img {
+  filter: invert(53%) sepia(87%) saturate(2987%) hue-rotate(329deg) brightness(94%) contrast(103%);
+}
+.active .active-roles::after {
+  color: #f44848 !important;
+}
+.active::after {
+  content: " ";
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  height: 3.06rem;
+  width: 4px;
+  border-radius: 5px 0 0 5px;
+  background-color: #f44848;
+}
+
+.main-content .add-employee h2 {
+  font-weight: 600;
+}
+.main-content .add-employee button {
+  padding: 0.7rem 1rem;
+}
+.main-content .cards {
+  display: flex;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  justify-content: space-evenly;
+}
+.main-content .cards p {
+  color: #62798f;
+}
+.main-content .cards .card {
+  width: 20.625rem;
+  padding: 1rem;
+  box-shadow: 0 0 0 2px #e6e6e6;
+  border-radius: 0.625rem;
+}
+.main-content .cards .card .text-icon {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content .cards .card .text-icon p {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0.7rem 0rem;
+}
+.main-content .cards .card .about .department,
+.main-content .cards .card .about .location {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content .cards .card .about .department p,
+.main-content .cards .card .about .location p {
+  font-size: 1rem;
+  margin: 0.4rem;
+}
+.main-content .cards .card .about .department .department-text,
+.main-content .cards .card .about .department .location-text,
+.main-content .cards .card .about .location .department-text,
+.main-content .cards .card .about .location .location-text {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.main-content .cards .card .about .total-employees {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-content .cards .card .about .total-employees img {
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 50%;
+  position: relative;
+}
+.main-content .cards .card .about .total-employees .img-container {
+  display: flex;
+  position: relative;
+  left: 1.875rem;
+}
+.main-content .cards .card .about .total-employees .img-container img:first-child {
+  z-index: 1;
+}
+.main-content .cards .card .about .total-employees .img-container img:nth-child(2) {
+  z-index: 2;
+  right: 0.625rem;
+}
+.main-content .cards .card .about .total-employees .img-container img:nth-child(3) {
+  z-index: 3;
+  right: 1.25rem;
+}
+.main-content .cards .card .about .total-employees .img-container img:nth-child(4) {
+  z-index: 4;
+  right: 1.875rem;
+}
+.main-content .cards .card .about .total-employees .img-container p {
+  z-index: 5;
+  font-size: 0.75rem;
+  position: relative;
+  margin: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #4c5f71;
+  text-align: center;
+  right: 2.5rem;
+}
+.main-content .cards .card .employee-view {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.625rem;
+}
+.main-content .cards .card .employee-view a {
+  text-decoration: none;
+}
+.main-content .cards .card .employee-view a p {
+  margin: 0;
+}
+
+.add-role-section {
+  display: none;
+}
+.add-role-section h3 {
+  margin: 1.5rem 0rem 0rem;
+}
+.add-role-section form > div {
+  display: flex;
+  gap: 3rem;
+}
+.add-role-section form .label-input-wrapper {
+  margin-top: 0.9rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.add-role-section form label {
+  color: #494a4b;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.add-role-section form input {
+  outline: none;
+  padding: 0.5rem;
+  border: 1px solid rgba(54, 53, 53, 0.185);
+  border-radius: 5px;
+  width: 13rem;
+}
+.add-role-section form input:focus,
+.add-role-section form select:focus,
+.add-role-section form textarea:focus {
+  border: 2px solid #4c9aff;
+}
+.add-role-section form select {
+  border: 1px solid rgba(54, 53, 53, 0.185);
+  border-radius: 5px;
+  outline: none;
+  padding: 0.5rem;
+  color: #414447;
+  width: 14rem;
+  background-color: #f4f5f7;
+}
+.add-role-section form textarea {
+  max-width: 31rem;
+  outline: none;
+  border: 1px solid rgba(54, 53, 53, 0.185);
+  border-radius: 5px;
+  color: #414447;
+  background-color: #f4f5f7;
+}
+.add-role-section form #Location {
+  width: 23rem;
+}
+.add-role-section form #assign-employees {
+  width: 22rem;
+  background-image: url(../../src/assets/down-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 21.875rem, 1.5625rem;
+}
+.add-role-section form #AddRoleFormWrapper {
+  padding: 0rem 0.3rem;
+  scrollbar-color: white white;
+  scrollbar-width: thin;
+  margin-top: 0.5rem;
+  overflow-y: scroll;
+  height: 9.0625rem;
+  width: 23rem;
+}
+.add-role-section form #AddRoleFormWrapper .employee-row {
+  margin: 0.5rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0.5rem;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.24);
+}
+.add-role-section form #AddRoleFormWrapper .employee-row div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.add-role-section form #AddRoleFormWrapper .employee-row div img {
+  height: 1.875rem;
+  width: 1.875rem;
+  border-radius: 50%;
+}
+.add-role-section form #AddRoleFormWrapper .employee-row div p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+.add-role-section form #AddRoleFormWrapper .employee-row input {
+  width: 1rem;
+}
+.add-role-section form > div:last-child {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+.add-role-section form > div:last-child button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+}
+.add-role-section form > div:last-child button:first-child {
+  background-color: rgb(253, 233, 233);
+  color: #ff4a4a;
+}
+.add-role-section form > div:last-child button:nth-child(2) {
+  background-color: #fd3535;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media screen and (max-width: 792px) {
+  form > div {
+    flex-direction: column;
+  }
+  form .buttons-section {
+    flex-direction: row;
+  }
+}

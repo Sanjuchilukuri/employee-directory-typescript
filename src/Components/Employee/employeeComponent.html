@@ -1,0 +1,139 @@
+<div class="main-content" id="mainContent">
+    <!-- Add employee section starts -->
+    <section class="add-employee">
+      <div>
+        <h2>Employees</h2>
+        <p>
+          Find all of your company's employee accounts and their
+          associated roles
+        </p>
+      </div>
+      <div>
+        <button class="export-btn" onclick="empServices.exportDataToExcel()">
+          EXPORT
+        </button>
+        <button class="add-btn" id="addEmployee" onclick="empObj.displayAddEmployeeForm()">
+          ADD EMPLOYEE
+        </button>
+      </div>
+    </section>
+    <!-- Add employee section ends -->
+
+    <!-- options section starts -->
+    <section class="options">
+      <ul id="alphabetsWrapper">
+        <li><img id="alphabetsFilter" src="./assets/filter-black.svg" alt="filter-icon" onclick="utilsObj.turnOffAlphabetFilter(this)"/></li>
+      </ul>
+    </section>
+    <!-- options section ends -->
+
+    <!-- filter section starts -->
+    <section class="filter" id="filter">
+      <div class="filter-options">
+        <p>Filter</p>
+        <img src="./assets/sort-descending.png" alt="sorting icon" />
+        <select name="status" id="status" onchange="utilsObj.updateButtonState(),utilsObj.toggleSelectTagState(this)"> </select>
+        <select name="location" id="Location" onchange="utilsObj.updateButtonState(),utilsObj.toggleSelectTagState(this)"></select>
+        <select name="department" id="Department" onchange="utilsObj.updateButtonState(),utilsObj.toggleSelectTagState(this)"></select>
+      </div>
+      <div>
+        <button class="reset-btn" id="resetBtn" onclick="utilsObj.resetAllFilters()" disabled>Reset</button>
+        <button class="apply-btn" id="applyBtn" onclick ="utilsObj.updateSelectFilters()" disabled>Apply</button>
+      </div>
+    </section>
+    <!-- filter section ends -->
+
+    <!-- user-data section starts -->
+    <section class="user-data">
+      <div class="delete">
+        <div>
+          <img src="./assets/arrow-left-down.png" alt="arrow-left-down"/>
+          <button id="deleteBtn" onclick="empServices.deleteSelectedEmployeeRecords()" disabled> Delete</button>
+        </div>
+        <img src="./assets/table-icon.png" alt="table icon" />
+      </div>
+
+      <div style="overflow-x: scroll">
+        <table id="table">
+          <thead>
+            <tr>
+              <td>
+                <input
+                  id="selectAll"
+                  type="checkbox"
+                  name="select-all"
+                  onclick="utilsObj.toggleAllCheckboxes(this)"
+                />
+              </td>
+              <th>
+                <div class="heading-wrapper" >
+                  <button class="transparent-btn" onclick="empServices.tableSorting(this)" id="user">USER</button>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="heading-wrapper" >
+                  <button class="transparent-btn" onclick="empServices.tableSorting(this)" id="locations">LOCATION</button>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="heading-wrapper" >
+                  <button class="transparent-btn" onclick="empServices.tableSorting(this)" id="departments">DEPARTMENT</button>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="heading-wrapper" >
+                  <button class="transparent-btn" onclick="empServices.tableSorting(this)" id="role">ROLE</button>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="heading-wrapper" >
+                  <button class="transparent-btn" onclick="empServices.tableSorting(this)" id="empNo">EMP NO</button>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="heading-wrapper" >
+                  <button class="transparent-btn" onclick="empServices.tableSorting(this)" id="status">STATUS</button>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="heading-wrapper" >
+                  <button class="transparent-btn" onclick="empServices.tableSorting(this)" id="joinDt">JOIN DT</button>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+              </th>
+              <th>...</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
+    <!-- user-data section ends -->
+  </div>

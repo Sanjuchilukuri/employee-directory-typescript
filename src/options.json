@@ -1,0 +1,8 @@
+{
+  "location": ["","Hyderabad", "seatle"],
+  "status": ["","Active", "InActive"],
+  "department": ["","Product Engg", "UIUX"],
+  "jobTitle" : ["","Full Stack Developer", "UX Designer"],
+  "manager" : ["","Elon Musk", "Modiji"],
+  "project" : ["","Neuralink","chandrayan4"]
+}

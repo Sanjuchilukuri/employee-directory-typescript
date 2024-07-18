@@ -1,0 +1,67 @@
+<aside class="sidebar" id="aside">
+  <!-- icon section starts -->
+  <div class="logo">
+    <img id="companyLogo" src="./assets/tezoLogo.svg" alt="Logo-image" />
+    <img id="sidebarIcon" src="./assets/sidebar-icon.svg" alt="sidebar icon" onclick="utilsObj.SidebarVisibility()"/>
+  </div>
+  <!-- icon section ends -->
+
+  <!-- sidenav-content starts -->
+  <div class="sidenav-content">
+    <div>
+      <!-- dashboard items section starts -->
+      <section class="sidenav-all">
+        <p>ALL</p>
+        <div class="sidenav-all-dashboard">
+          <div class="all-dashboard-item">
+            <div>
+              <img src="./assets/dashboard.svg" alt="dashboard image" />
+              <p>Dashboard</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidenav-all-employee active-employees" id="employeeSection" onclick="managerObj.changeDisplay('employees')">
+            <div class="all-employees-item" >
+              <div>
+                <img src="./assets/employee.svg" alt="employees image"/>
+                <p>Employees</p>
+              </div>
+            </div>
+        </div>
+      </section>
+      <!-- dashboard items section ends  -->
+
+      <!-- sidenav-role section starts -->
+      <section class="sidenav-role">
+        <p id="sideNavRoleText">ROLE/USER MANAGEMENT</p>
+          <div class="roles-wrapper active" id="rolesSection" onclick="managerObj.changeDisplay('roles')">
+            <div class="user-roles active-roles" >
+              <img src="./assets/roles-homepage.svg" alt="roles image" />
+              <p>Roles</p>
+            </div>
+          </div>
+        <div class="user-roles">
+          <img src="./assets/access-rights.svg" alt="user roles image" />
+          <p>Access Rights</p>
+        </div>
+      </section>
+      <!-- sidenav-role section ends-->
+    </div>
+
+    <!-- Update section starts -->
+    <section class="sidenav-update">
+      <p>Install new update 2.3.1A</p>
+      <p class="update-description">
+        Allow to launch the new update for the AD application
+      </p>
+      <div>
+        <button>Dismiss</button>
+        <button>Accept</button>
+      </div>
+    </section>
+    <!-- Update section ends -->
+  </div>
+
+  <!-- sidenav-content ends -->
+</aside>

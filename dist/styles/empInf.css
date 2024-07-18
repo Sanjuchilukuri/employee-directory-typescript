@@ -1,0 +1,130 @@
+@import url(../../dist/styles/common.css);
+.active {
+  position: relative;
+}
+.active .active-roles {
+  margin-top: 1rem;
+  background-color: #fde9e9;
+  border-radius: 8px;
+}
+.active .active-roles > p {
+  color: #f44848 !important;
+}
+.active .active-roles > img {
+  filter: invert(53%) sepia(87%) saturate(2987%) hue-rotate(329deg) brightness(94%) contrast(103%);
+}
+.active .active-roles::after {
+  color: #f44848 !important;
+}
+.active::after {
+  content: " ";
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  height: 3.06rem;
+  width: 4px;
+  border-radius: 5px 0 0 5px;
+  background-color: #f44848;
+}
+
+.add-employee {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.add-employee h2 {
+  color: #4c5f71;
+  font-size: 1rem;
+  margin: 0.8rem 0rem;
+  font-weight: 600;
+}
+.add-employee p {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #a1a5a8;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.add-employee button {
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 0.7rem 0.5rem;
+}
+.add-employee .add-btn {
+  color: #fff;
+  background-color: #f44848;
+  border-radius: 0.5625rem;
+}
+.add-employee .add-btn::before {
+  font-family: "FontAwesome";
+  content: "+";
+  padding-right: 0.625rem;
+}
+
+.role-description {
+  margin-top: 0.5rem;
+}
+.role-description h2 {
+  font-size: 1rem;
+}
+.role-description p {
+  color: #4c5f71;
+  font-size: 0.89rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  gap: 1.3rem;
+}
+.cards .card {
+  width: 20.625rem;
+  padding: 1rem;
+  box-shadow: 0 0 0 2px #e6e6e6;
+  border-radius: 0.625rem;
+}
+.cards .card .image-section {
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem;
+}
+.cards .card .image-section img {
+  height: 2.1875rem;
+  border-radius: 50%;
+}
+.cards .card .image-section div p {
+  margin: 0;
+}
+.cards .card .image-section div p:first-child {
+  font-size: 1rem;
+}
+.cards .card .image-section div p:nth-child(2) {
+  font-size: 0.7rem;
+}
+.cards .card .about {
+  margin-top: 1rem;
+}
+.cards .card .about div {
+  margin-top: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem;
+}
+.cards .card .about div img {
+  height: 1.25rem;
+}
+.cards .card .about div p {
+  margin: 0;
+}
+.cards .card .view-detail {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.625rem;
+}
+.cards .card .view-detail p {
+  margin: 0;
+}
